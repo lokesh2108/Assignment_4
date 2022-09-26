@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+
+        body{
+            display: grid;
+            width: 960px;
+            margin: 10px auto 10px auto;
+            grid-template-columns: repeat(3,fr);
+            grid-template-rows: 90px 290px 380px 1fr;
+            grid-gap:10px;
+            font-family: sans-serif;
+        }
+        .complogo,.navigations,.section2 div,footer{
+            background-color: silver;}
+        
+        header{
+            display: grid;
+            grid-row: 1/2;
+            grid-column: 1/5;
+            grid-template-columns: repeat(4,1fr);
+            grid-gap: 10px; }
+        
+        .complogo{
+              grid-column: 1/2;
+        }
+        .navigations{
+            display: grid;
+            grid-column: 3/5;
+            grid-row: 1/2;
+            grid-template-columns: repeat(4,1fr);
+            height: 45px;
+            grid-gap: 10px;
+            align-self: center; 
+
+        }
+        .navigations span{
+             align-self: center;
+             justify-self: center;
+        }
+       
+        .section1{
+            grid-column: 1/5;
+            grid-row: 2/4;
+            font-weight: bold;
+        }
+        
+        .section1 h1 {font-size: 42px;}
+        .section1 h4 {font-size: 25px;} 
+
+         .section2{
+            display: grid;
+            grid-column: 1/5;
+            grid-row: 3/4;
+
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(3,1fr);
+            grid-gap: 10px; }
+        
+          
+
+        footer{
+            display: grid;
+            grid-column: 1/5;
+            grid-row: 4/5;
+            justify-content: center;
+            align-self: center; }
+
+    </style>
+</head>
+<body>
+   <header>
+        <div class="complogo">Company Logo</div>
+        <div class="navigations">
+            <span>Item1</span>
+            <span>Item2</span>
+            <span>Item3</span>
+            <span>Item4</span>
+         </div>
+    </header>
+    <section class="section1">
+    <h1>Lorem ipsum dolor sit amet, ne saepe phaedrum cotidieque has, natum zril pro ei.</h1>
+    <h4>Cu vel aliquid lobortis deseruisse. Nam at adipisci dignissim forensibus. Qui an recteque maluisset assentior, cu ferri aperiam imperdiet sed.</h4>
+</section>
+    
+
+    <section class="section2">
+        <div ></div>
+        <div ></div>
+        <div ></div>
+        <div ></div>
+        <div ></div>
+        <div ></div>
+        <div ></div>
+        <div ></div>
+        <div ></div>
+     </section>
+    <footer>
+       <p>Copyright Notice </p>  
+    </footer>
+</body>
+</html>
